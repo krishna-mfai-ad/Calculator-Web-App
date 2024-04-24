@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calsi.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calsi">
+            <input type="text" readonly id="box">
+            <div class="buttons">
+                <!--Layer One AC-DEL-%-/ -->
+            <div class="layer-1">
+                <button onclick="ac()">
+                     AC
+                </button>
+                <button onclick="del()">
+                     DEL
+                </button>
+                <button onclick="display('%')">
+                  %
+                </button>
+                <button onclick="display('/')" class="corner-right-btn">
+                 /
+                </button>
+             </div>
+             <!-- 7-8-9- -->
+             <div class="layer-2">
+                 <button onclick="display('7')" >
+                      7
+                 </button>
+                 <button onclick="display('8')">
+                      8
+                 </button>
+                 <button onclick="display('9')">
+                      9
+                 </button>
+                 <button onclick="display('*')" class="corner-right-btn">
+                     *
+                 </button>
+              </div>
+              <!-- 4-5-6- -->
+              <div class="layer-3">
+                 <button onclick="display('4')">
+                      4
+                 </button>
+                 <button onclick="display('5')">
+                      5
+                 </button>
+                 <button onclick="display('6')">
+                   6
+                 </button>
+                 <button onclick="display('-')" class="corner-right-btn">
+                  -
+                 </button>
+              </div>
+              <!-- 1-2-3- -->
+              <div class="layer-4">
+                 <button onclick="display('1')" >
+                      1
+                 </button>
+                 <button onclick="display('2')">
+                      2
+                 </button>
+                 <button onclick="display('3')">
+                     3
+                 </button>
+                 <button onclick="display('+')" class="corner-right-btn">
+                     +
+                 </button>
+              </div>
+              <!-- 0 -.- = -->
+              <div class="layer-5">
+                 <button onclick="display('0')" class="zero-btn">
+                      0
+                 </button>
+                 <button onclick="display('.')">
+                      .
+                 </button>
+                 <button onclick="equal()" class="corner-right-btn">
+                     =
+                 </button>
+              </div>
+            </div>
+        </div>
+        <footer>
+            Coded By 
+            <a href="">
+                Krishna
+            </a>
+            
+        </footer>
+    </div>
+
+    <script>
+        var input = document.getElementById("box")
+
+        function display(val){
+            box.value += val
+        }
+        function ac(){
+            box.value=""
+        }
+        function equal(){
+            var a=eval(box.value)
+            box.value=a
+        }
+        function del(){
+            box.value=box.value.slice(0,-1)
+        }
+    </script>
+</body>
+</html>
